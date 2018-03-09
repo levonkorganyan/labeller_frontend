@@ -3,16 +3,18 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
-
+import { LabelsComponent } from './labels/labels.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LabelsComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpModule,
   ],
-  providers: [],
+  providers: [LabelsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
