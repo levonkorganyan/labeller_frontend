@@ -3,18 +3,19 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
-import { LabelsComponent } from './labels/labels.component';
+import { AsyncImageComponent } from './async-image.component';
+import { ImagesService } from './images.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LabelsComponent
+    AsyncImageComponent
   ],
   imports: [
     BrowserModule,
     HttpModule,
   ],
-  providers: [LabelsService],
+  providers: [ImagesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,5 @@
+<div class="image-panel">
+    <div class="image-wrapper" [ngStyle]="{'background-color': imageData.color}">
+        <img class="image" (load)="onLoad()" src="{{imageData.url}}" [ngClass]="{'show': !loading}"/>
+    </div>
+</div>
