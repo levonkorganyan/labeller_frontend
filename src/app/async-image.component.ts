@@ -7,7 +7,9 @@ import { Component, OnInit, AfterViewInit, ElementRef, ViewChild, Input } from '
 })
 export class AsyncImageComponent implements OnInit, AfterViewInit {
     @ViewChild('image') input: ElementRef;
-    @Input() imageData: string;
+    @Input() imageData: any = [];
+    @Input() labels: any = [];
+
     loading: boolean = true;
 
     ngOnInit() {
@@ -16,16 +18,8 @@ export class AsyncImageComponent implements OnInit, AfterViewInit {
     onLoad() {
         this.loading = false;
     }
+
     ngAfterViewInit() {
-        /*
-        const self = this;
-        const img = document.createElement('img');
-        img.onload = () => {
-            img.remove();
-            console.log('Time to make child image visible');
-            console.log(this.input);
-            this.input.nativeElement.classList.add('show');
-        };
-        img.src = "https://cdn-images-1.medium.com/max/1200/1*Ifm00n-npUdYWTDbZag3rQ.png";*/
+
     }
 }
