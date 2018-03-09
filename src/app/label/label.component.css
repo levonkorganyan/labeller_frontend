@@ -4,5 +4,18 @@
   top: 0px;
   left: 0px;
   z-index: 1000;
-  border: 2px solid red;
+  border: 2px solid blue;
+}
+
+/* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+.label-name {
+  color: blue;
+  font-size: 1.2em;
+  font-weight: bold;
 }

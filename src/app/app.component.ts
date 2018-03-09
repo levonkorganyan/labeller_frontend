@@ -13,11 +13,9 @@ export class AppComponent implements OnInit {
   constructor(private imagesService: ImagesService) { }
 
   ngOnInit() {
-      this.imagesService.getAllImages().subscribe(imageResponse => {
-        //if (!imageResponse.hasOwnProperty('_body')) return;
-        console.log(imageResponse);
-        this.images = JSON.parse(imageResponse._body);
-        //console.log(this.images);
+      this.imagesService.getAllImages().subscribe(
+        (images) => {
+          this.images = images;
       });
   }
 }
