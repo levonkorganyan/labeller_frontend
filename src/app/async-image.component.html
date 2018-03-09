@@ -1,8 +1,8 @@
 <div class="image-panel">
     <div class="image-wrapper" [ngStyle]="{'background-color': imageData.color}">
         <img class="image" (load)="onLoad()" src="{{imageData.url}}" [ngClass]="{'show': !loading}"/>
-        <div class="label-container">
-          <div *ngFor="let label of labels" class="label" [style.width.px]="label.width" [style.height.px]="label.height"></div>
+        <div *ngFor="let label of imageData.labels">
+          <app-label [labelData]="label"></app-label>
         </div>
     </div>
 </div>

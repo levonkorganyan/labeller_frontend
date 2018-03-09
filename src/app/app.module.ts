@@ -6,11 +6,13 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { AsyncImageComponent } from './async-image.component';
 import { ImagesService } from './images.service';
+import { LabelComponent } from './label/label.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AsyncImageComponent
+    AsyncImageComponent,
+    LabelComponent
   ],
   imports: [
     BrowserModule,

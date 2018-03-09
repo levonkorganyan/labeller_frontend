@@ -8,7 +8,6 @@ import { Component, OnInit, AfterViewInit, ElementRef, ViewChild, Input } from '
 export class AsyncImageComponent implements OnInit, AfterViewInit {
     @ViewChild('image') input: ElementRef;
     @Input() imageData: any = [];
-    @Input() labels: any = [];
 
     loading: boolean = true;
 
